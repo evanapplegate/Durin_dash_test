@@ -111,10 +111,6 @@ function initCircleCharts() {
                 plugins: {
                     legend: { display: false },
                     tooltip: { enabled: false }
-                },
-                animation: {
-                    animateRotate: true,
-                    duration: 1000
                 }
             }
         });
@@ -190,39 +186,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initLineCharts();
     initCircleCharts();
     initMap();
-});
-
-// Add some interactive elements
-document.addEventListener('DOMContentLoaded', () => {
-    // Add hover effects to cards
-    const cards = document.querySelectorAll('.metric-card, .circle-card');
-    cards.forEach(card => {
-        card.addEventListener('mouseenter', () => {
-            card.style.transform = 'translateY(-2px)';
-            card.style.boxShadow = '0 4px 8px rgba(197, 103, 35, 0.2)';
-            card.style.borderColor = COLORS.highlight;
-        });
-        
-        card.addEventListener('mouseleave', () => {
-            card.style.transform = 'translateY(0)';
-            card.style.boxShadow = 'none';
-            card.style.borderColor = COLORS.border;
-        });
-    });
-
-    // Add smooth transitions
-    const style = document.createElement('style');
-    style.textContent = `
-        .metric-card, .circle-card {
-            transition: all 0.3s ease;
-        }
-        .metric-card:hover, .circle-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(197, 103, 35, 0.2);
-            border-color: #C56723;
-        }
-    `;
-    document.head.appendChild(style);
 });
 
 // Dropdown functionality
