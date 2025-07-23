@@ -23,7 +23,8 @@ body {
     max-width: 100%;
     margin: 0 auto;
     display: grid;
-    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 1fr auto;
     gap: 20px;
     min-height: 100vh;
     padding: 0 10px;
@@ -31,23 +32,23 @@ body {
 
 .metrics-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: 1fr;
     gap: 15px;
 }
 
 .metric-card {
     background: #2d2d2d;
     border-radius: 6px;
-    padding: 20px;
+    padding: 10px;
     border: 1px solid #404040;
     position: relative;
 }
 
 .metric-value {
-    font-size: 2.2em;
+    font-size: 1.8em;
     font-weight: bold;
     color: #e0e0e0;
-    margin-bottom: 5px;
+    margin-bottom: 3px;
 }
 
 .metric-unit {
@@ -59,12 +60,12 @@ body {
 .metric-label {
     font-size: 0.9em;
     color: #999;
-    margin-bottom: 15px;
+    margin-bottom: 8px;
 }
 
 .metric-chart {
-    height: 60px;
-    margin-bottom: 10px;
+    height: 30px;
+    margin-bottom: 5px;
 }
 
 .metric-progress {
@@ -94,12 +95,13 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 15px;
+    grid-column: 1 / -1;
 }
 
 .circle-card {
     background: #2d2d2d;
     border-radius: 6px;
-    padding: 20px;
+    padding: 10px;
     border: 1px solid #404040;
     text-align: center;
 }
@@ -107,19 +109,19 @@ body {
 .circle-label {
     font-size: 0.9em;
     color: #999;
-    margin-bottom: 15px;
+    margin-bottom: 8px;
 }
 
 .circle-value {
-    font-size: 1.8em;
+    font-size: 0.9em;
     font-weight: bold;
     color: #e0e0e0;
-    margin-top: 15px;
+    margin-top: 8px;
 }
 
 .circle-chart {
-    width: 120px;
-    height: 120px;
+    width: 80px;
+    height: 80px;
     margin: 0 auto;
 }
 
